@@ -31,13 +31,22 @@ class NewItemViewViewModel: ObservableObject{
             return
         }
         
-        //create models
+        //create model
+        
+        let newId =  UUID().uuidString
+        
+        let newItem = TodoListItem(
+            id: newId,
+            title: title,
+            dueDate: dueDate.timeIntervalSince1970,
+            createdDate: Date().timeIntervalSince1970,
+            isDone: false )
         
         
         //save model
         let db = Firestore.firestore()
-        db.collection("users").document(userId).collection("Todos")
-            .document("123").setData([: ])
+        db.collection("Users").document(userId).collection("Todos")
+            .document(newId).setData(newItem.asDictionary())
         
         
         
