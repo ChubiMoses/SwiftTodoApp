@@ -1,4 +1,6 @@
 Swift-Firebase-Todo-App
+
+
 A simple and elegant to-do list application for iOS, built with Swift and powered by Firebase Firestore for real-time data synchronization. This app allows users to create, manage, and delete tasks, with all changes instantly reflected across devices.
 
 Features
@@ -23,7 +25,7 @@ Getting Started
 Follow these steps to get the app up and running on your local machine.
 
 1. Clone the repository
-git clone [https://github.com/your-username/swift-firebase-todo-app.git](https://github.com/your-username/swift-firebase-todo-app.git)
+git clone git@github.com:ChubiMoses/SwiftTodoApp.git
 cd swift-firebase-todo-app
 
 2. Firebase Project Setup
