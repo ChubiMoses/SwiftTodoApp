@@ -29,7 +29,8 @@ class RegisterViewViewModel: ObservableObject{
             return ;
         }
         
-     //register
+        print("Rig........")
+        
         Auth.auth().createUser(withEmail: email, password: password ){[weak self] result, error in
             guard let userId = result?.user.uid else{
                 return
@@ -37,7 +38,9 @@ class RegisterViewViewModel: ObservableObject{
             self?.insertUserRecord(id:userId)
         }
         
+        
     }
+    
     
     
     private func insertUserRecord(id:String){
@@ -50,7 +53,7 @@ class RegisterViewViewModel: ObservableObject{
     }
     
     
-    private func validate()->Bool{
+     private func validate()->Bool{
         
         errorMessage = ""
         guard !email.trimmingCharacters(in: .whitespaces).isEmpty,

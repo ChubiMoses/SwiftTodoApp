@@ -30,10 +30,6 @@ class ProfileViewViewModel: ObservableObject{
                 return
             }
             
-            
-            
-            
-            
             DispatchQueue.main.async {
                
                 self?.user = User(

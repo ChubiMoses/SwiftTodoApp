@@ -20,8 +20,13 @@ struct RegisterView: View {
             HeaderView(title: "Register", subTitle: "Start Organizing todos", angle: -15, background: Color.orange)
                 .offset(y:-4)
             
-            //Login
+            //Register
             Form {
+                
+                if !viewModel.errorMessage.isEmpty{
+                    Text(viewModel.errorMessage)
+                        .foregroundColor(.red)
+                }
                 
                 TextField("Full name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle() )
@@ -40,6 +45,7 @@ struct RegisterView: View {
                 TLButton(label: "Create Account ", background:.blue)
                           {
                               viewModel.register()
+                              
                         }
                     .padding()
                 

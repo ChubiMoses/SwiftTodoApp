@@ -21,7 +21,7 @@ class TodoListItemViewViewModel: ObservableObject{
         
         var itemCopy = item;
         
-        itemCopy.setDone(item.isDone)
+        itemCopy.setDone(state:item.isDone)
         
         guard let uid = Auth.auth().currentUser?.uid else {
             return
@@ -29,15 +29,10 @@ class TodoListItemViewViewModel: ObservableObject{
         
         let db =  Firestore.firestore()
         
-        db.collection("Users").document(uid )
+        db.collection("Users").document(uid)
             .collection("Todos")
             .document(itemCopy.id)
             .setData(itemCopy.asDictionary())
-        
-        
-        
-        
-        
     }
     
 }

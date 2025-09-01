@@ -14,7 +14,7 @@ struct ProfileView: View {
     var body: some View {
         NavigationView{
          
-                VStack{
+            VStack{
                     if let user = viewModel.user{
                         profile(user: user)
                         
@@ -34,7 +34,7 @@ struct ProfileView: View {
     
     @ViewBuilder
     func profile(user:User) -> some View{
-        Image(systemName: "person.cicle")
+        Image(systemName: "person.circle")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .foregroundColor(.blue)
@@ -42,19 +42,22 @@ struct ProfileView: View {
             .padding()
         
         
-        VStack{
+        VStack(alignment: .leading){
+            
             HStack{
                 Text("Name:")
                 Text(user.name)
             }
+            .padding()
             HStack{
                 Text("Email")
                 Text(user.email)
             }
+            .padding()
             HStack{
                 Text("Member Since:")
                 Text("\(Date(timeIntervalSince1970:user.joined).formatted(date:.abbreviated, time:.shortened))")
-            }
+            }.padding()
         }.padding()
         
         Button("Log Out") {
@@ -62,6 +65,8 @@ struct ProfileView: View {
         }
         .tint(.red)
         .padding()
+        
+        Spacer()
     }
 }
 

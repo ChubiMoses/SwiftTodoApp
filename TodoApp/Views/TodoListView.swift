@@ -11,10 +11,11 @@ import SwiftUI
 
 struct TodoListView: View {
     @StateObject var todoVM:TodoListViewViewModel
-   @FirestoreQuery var items : [TodoListItem]
+    @FirestoreQuery var items : [TodoListItem]
    
     init(userId:String) {
-        self._items = FirestoreQuery(collectionPath: "Users\(userId)/Todos")
+        
+        self._items = FirestoreQuery(collectionPath:"Users/\(userId)/Todos")
         
         self._todoVM = StateObject(wrappedValue: TodoListViewViewModel(userId: userId))
     }

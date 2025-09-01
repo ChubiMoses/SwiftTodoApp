@@ -15,7 +15,7 @@ struct TodoListItem: Codable, Identifiable{
     var isDone: Bool
     
     
-    mutating func setDone(_ state:Bool){
+    mutating func setDone(state:Bool){
         isDone = state 
     }
 }

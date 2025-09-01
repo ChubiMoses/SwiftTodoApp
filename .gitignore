@@ -1,0 +1,21 @@
+    # Xcode
+    .DS_Store
+    *.xcodeproj/*.mode*
+    *.xcodeproj/*.pbxuser
+    *.xcworkspace/xcuserdata/
+    *.xcuserdatad/
+    xcuserdata/
+    build/
+    DerivedData/
+    .swiftpm/
+    .vscode/
+
+    # Swift Package Manager
+    .build/
+
+    # CocoaPods
+    Pods/
+    .symlinks/
+    
+    Firebase
+    TodoApp/Other/GoogleService-Info

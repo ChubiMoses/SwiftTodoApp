@@ -11,7 +11,7 @@ struct MainView: View {
     @StateObject var mainVM = MainViewViewModel()
     
     var body: some View {
-        if mainVM.currentUserId.isEmpty {
+        if mainVM.isSignedIn,!mainVM.currentUserId.isEmpty {
             accountView
         }else{
             LoginView()
