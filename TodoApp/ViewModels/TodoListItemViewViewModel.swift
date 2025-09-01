@@ -21,7 +21,7 @@ class TodoListItemViewViewModel: ObservableObject{
         
         var itemCopy = item;
         
-        itemCopy.setDone(state:item.isDone)
+        itemCopy.setDone(state:item.isDone ?  false: true)
         
         guard let uid = Auth.auth().currentUser?.uid else {
             return

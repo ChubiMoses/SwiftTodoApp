@@ -17,8 +17,9 @@ struct RegisterView: View {
     var body: some View {
         //register
         VStack{
-            HeaderView(title: "Register", subTitle: "Start Organizing todos", angle: -15, background: Color.orange)
-                .offset(y:-4)
+            HeaderView(title: "Register", subTitle: "Start Organizing todos", angle: -15, background: Color.blue)
+                .padding(.top, 20)
+                .offset(y:-70)
             
             //Register
             Form {

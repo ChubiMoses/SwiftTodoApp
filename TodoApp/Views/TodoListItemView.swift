@@ -15,7 +15,9 @@ struct TodoListItemView: View {
         HStack{
             VStack(alignment: .leading){
                 Text(item.title)
-                    .font(.title)
+                  // .font(.title)
+                    .font(.system(size: 20))
+                    .bold()
                     
                 Text("\(Date(timeIntervalSince1970: item.dueDate).formatted(date:.abbreviated, time:.shortened))")
                     .font(.footnote)

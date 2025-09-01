@@ -46,17 +46,23 @@ struct ProfileView: View {
             
             HStack{
                 Text("Name:")
+                    .bold()
                 Text(user.name)
+                    .bold()
             }
             .padding()
             HStack{
                 Text("Email")
+                    .bold()
                 Text(user.email)
+                    .bold()
             }
             .padding()
             HStack{
                 Text("Member Since:")
+                    .bold()
                 Text("\(Date(timeIntervalSince1970:user.joined).formatted(date:.abbreviated, time:.shortened))")
+                    .bold()
             }.padding()
         }.padding()
         

@@ -37,6 +37,7 @@ struct TodoListView: View {
                 }
                 
             }
+           
             .navigationTitle("To do List")
             .toolbar{
                 Button{
