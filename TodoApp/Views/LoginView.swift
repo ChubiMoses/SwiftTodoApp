@@ -44,7 +44,7 @@ struct LoginView: View {
                     
                 .offset(y:-10)
                 
-                //Crreate Account
+                //Create Account
                 VStack{
                     Text("New around here? ")
 //                    Button("Create account"){

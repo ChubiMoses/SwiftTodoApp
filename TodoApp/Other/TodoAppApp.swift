@@ -15,7 +15,7 @@ struct TodoAppApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView().preferredColorScheme(.dark)
         }
     }
 }
